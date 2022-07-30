@@ -6,4 +6,7 @@ def get_next_date(some_date):
 
     Returns: следующая дата
     """
+    from datetime import timedelta
+    return some_date + timedelta(1)
+
     raise NotImplementedError

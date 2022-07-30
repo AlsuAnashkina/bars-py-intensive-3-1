@@ -21,6 +21,6 @@ class MyTestCase(unittest.TestCase):
     def test_get_invalid_scale(self):
         self.assertEqual(int(convert_temperature(10, 'I')), 10)
 
-
+#
 if __name__ == '__main__':
     unittest.main()
