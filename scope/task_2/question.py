@@ -4,11 +4,21 @@
 
 
 def transmit_to_space(message):
-   
-    def data_transmitter():        
+
+    def data_transmitter():
         print(message)
 
     data_transmitter()
 
 
 print(transmit_to_space("Test message"))
+
+"""
+Будет выведено 
+Test message
+None
+Первая строчка будет выведена, потому что внутри принта(который в модуле) есть вызов функции трансмит
+(функция идет со скобкой). При вызове функции срабатывает принт, который внутри функции.
+Дальше мы хотим принтатнуть результат выполнения функции transmit_to_space, но эта функция ничего не возвращает,
+нет ретурна, поэтому выводится None. 
+"""
