@@ -1,4 +1,4 @@
-def decorator_maker():
+def decorator_maker(func):
     """
     Обертка, которая повторяет вызов функции times раз с паузой delay секунд
     Args:
@@ -8,5 +8,18 @@ def decorator_maker():
     Returns:
         валидное значение (при вызове bool() -> True)
     """
+    from time import sleep
+    def wrapper(times, delay):
+        for el in range(times):
+            result = func()
+            if result == True:
+                break
+            sleep(delay)
+        else:
+            raise MyException
+
+        return result
+    return wrapper
     raise NotImplementedError
+
 
